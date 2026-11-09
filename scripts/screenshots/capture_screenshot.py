@@ -31,10 +31,12 @@ def wait_for_server() -> None:
     """@brief Wait until the app answers on BASE_URL."""
     for _ in range(100):
         try:
-            urllib.request.urlopen(BASE_URL + "/")
+            # nosemgrep: opengrep.rules.python.lang.security.audit.insecure-transport.urllib.insecure-urlopen
+            urllib.request.urlopen(BASE_URL + "/")  # local test server inside the container
             return
         except OSError:
-            time.sleep(0.3)
+            # nosemgrep: opengrep.rules.python.lang.best-practice.arbitrary-sleep
+            time.sleep(0.3)  # poll until the server inside the container answers
     raise RuntimeError("The app did not start.")
 
 
@@ -59,7 +61,8 @@ def capture_web(step: dict[str, object]) -> None:
     @param step A step definition from screenshots.json.
     """
     shutil.rmtree("instance", ignore_errors=True)
-    server = subprocess.Popen(APPS[str(step["app"])])
+    # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
+    server = subprocess.Popen(APPS[str(step["app"])])  # fixed commands from APPS
     try:
         wait_for_server()
         with sync_playwright() as playwright:
@@ -83,7 +86,8 @@ def capture_script(step: dict[str, object]) -> None:
         path.unlink()
     lines = []
     for command in step["commands"]:  # type: ignore[attr-defined]
-        done = subprocess.run(
+        # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
+        done = subprocess.run(  # commands come from screenshots.json in this repository
             command, capture_output=True, text=True, check=False
         )
         lines.append("$ " + " ".join(command))
