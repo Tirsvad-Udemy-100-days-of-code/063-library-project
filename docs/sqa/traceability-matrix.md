@@ -4,12 +4,13 @@
 | Key | Value |
 | --- | --- |
 | ID | TM-001 |
-| CrossReference | [BC-001], [SA-001], [PP-001] |
+| CrossReference | [BC-001], [SA-001], [PP-001], [ADR-0001], [ADR-0002] |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
+| 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
+| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
 
 ---
 
@@ -24,20 +25,22 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [BC-001] | Business Case | en | it | - | [SA-001], [PP-001] | [RC-001], [RC-009] |
 | [SA-001] | Stakeholder Analysis | en | it | [BC-001] | [PP-001] | [RC-002] |
 | [PP-001] | Project Plan | en | it | [BC-001], [SA-001] | MIL-001 to MIL-005 | [RC-003] |
-| [MIL-001] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-004] |
+| [MIL-001] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-004], [RC-012] |
 | [MIL-002] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-005] |
 | [MIL-003] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-006] |
 | [MIL-004] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-007] |
 | [MIL-005] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-008] |
+| [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] | [RC-010] |
+| [ADR-0002] | ADR | - | - | [BC-001], [SA-001] | [MIL-001] | [RC-011] |
 
 ## Concern Coverage
 
 | Concern (CN-ID) | Views that answer it | Decisions (ADR) | Quality check (TP) | Status |
 | --- | --- | --- | --- | --- |
-| CN-001 | - | - | - | Gap |
+| CN-001 | - | [ADR-0001] | - | Gap |
 | CN-002 | - | - | - | Gap |
 | CN-003 | - | - | - | Gap |
-| CN-004 | - | - | - | Gap |
+| CN-004 | - | [ADR-0002] | - | Gap |
 | CN-005 | - | - | - | Gap |
 | CN-006 | - | - | - | Gap |
 | CN-007 | - | - | - | Gap |
@@ -72,3 +75,9 @@ No view artifacts exist yet, so every concern is a Gap until the milestones deli
 [RC-008]: ./reviews/rc-008-mil-005-wiki-and-readme.md
 [RC-009]: ./reviews/rc-009-business-case-delta.md
 [e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6
+[ADR-0001]: ../adr/adr-0001-no-use-cases-for-lesson-steps.md
+[ADR-0002]: ../adr/adr-0002-layered-source-with-assignment-names.md
+[RC-010]: ./reviews/rc-010-adr-0001.md
+[RC-011]: ./reviews/rc-011-adr-0002.md
+[RC-012]: ./reviews/rc-012-code-mil-001.md
+[982abab]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/982abab59b0f2bfbc32ffbf96ae1eb41651bbb64
