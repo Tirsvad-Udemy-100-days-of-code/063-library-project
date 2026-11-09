@@ -10,7 +10,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | pending |
+| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
 
 ---
 
@@ -80,3 +80,4 @@ No view artifacts exist yet, so every concern is a Gap until the milestones deli
 [RC-010]: ./reviews/rc-010-adr-0001.md
 [RC-011]: ./reviews/rc-011-adr-0002.md
 [RC-012]: ./reviews/rc-012-code-mil-001.md
+[982abab]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/982abab59b0f2bfbc32ffbf96ae1eb41651bbb64

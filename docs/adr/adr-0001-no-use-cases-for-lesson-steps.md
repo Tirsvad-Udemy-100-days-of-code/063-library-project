@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [982abab] |
 
 Allowed Status values: `Proposed`, `Accepted`, `Rejected`, `Deprecated`, `Superseded by ADR-NNNN`.
 
@@ -44,3 +44,4 @@ Use cases, user stories and a separate governance document are not created for t
 
 [BC-001]: ../business-case.md
 [PP-001]: ../project-plan.md
+[982abab]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/982abab59b0f2bfbc32ffbf96ae1eb41651bbb64
