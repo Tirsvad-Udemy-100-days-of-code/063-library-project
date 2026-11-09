@@ -3,23 +3,42 @@
     "name": "step-1-1-home",
     "kind": "web",
     "app": "in_memory",
-    "actions": [{"goto": "/"}]
+    "actions": [
+      {
+        "goto": "/"
+      }
+    ]
   },
   {
     "name": "step-1-2-add-form",
     "kind": "web",
     "app": "in_memory",
-    "actions": [{"goto": "/add"}]
+    "actions": [
+      {
+        "goto": "/add"
+      }
+    ]
   },
   {
     "name": "step-1-3-add-book",
     "kind": "web",
     "app": "in_memory",
     "actions": [
-      {"goto": "/add"},
-      {"fill": "input[name=title]", "value": "Harry Potter"},
-      {"fill": "input[name=author]", "value": "J. K. Rowling"},
-      {"fill": "input[name=rating]", "value": "9"}
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9"
+      }
     ]
   },
   {
@@ -27,22 +46,172 @@
     "kind": "web",
     "app": "in_memory",
     "actions": [
-      {"goto": "/add"},
-      {"fill": "input[name=title]", "value": "Harry Potter"},
-      {"fill": "input[name=author]", "value": "J. K. Rowling"},
-      {"fill": "input[name=rating]", "value": "9"},
-      {"click": "text=Add Book"},
-      {"goto": "/add"},
-      {"fill": "input[name=title]", "value": "The Hobbit"},
-      {"fill": "input[name=author]", "value": "J. R. R. Tolkien"},
-      {"fill": "input[name=rating]", "value": "8.5"},
-      {"click": "text=Add Book"}
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "The Hobbit"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. R. R. Tolkien"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "8.5"
+      },
+      {
+        "click": "text=Add Book"
+      }
     ]
   },
   {
     "name": "step-1-5-empty-library",
     "kind": "web",
     "app": "in_memory",
-    "actions": [{"goto": "/"}]
+    "actions": [
+      {
+        "goto": "/"
+      }
+    ]
+  },
+  {
+    "name": "step-2-1-sqlite3-create-table",
+    "kind": "script",
+    "title": "Step 2.1 - sqlite3: create the table books",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlite3_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlite3_lesson",
+        "show"
+      ]
+    ]
+  },
+  {
+    "name": "step-2-2-sqlite3-insert",
+    "kind": "script",
+    "title": "Step 2.2 - sqlite3: insert Harry Potter",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlite3_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlite3_lesson",
+        "insert"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlite3_lesson",
+        "show"
+      ]
+    ]
+  },
+  {
+    "name": "step-3-1-sqlalchemy-create",
+    "kind": "script",
+    "title": "Step 3.1 - SQLAlchemy: model, create table and first record",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "show"
+      ]
+    ]
+  },
+  {
+    "name": "step-3-2-sqlalchemy-read",
+    "kind": "script",
+    "title": "Step 3.2 - SQLAlchemy: read all and read by title",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "read"
+      ]
+    ]
+  },
+  {
+    "name": "step-3-3-sqlalchemy-update",
+    "kind": "script",
+    "title": "Step 3.3 - SQLAlchemy: update by query and by primary key",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "update"
+      ]
+    ]
+  },
+  {
+    "name": "step-3-4-sqlalchemy-delete",
+    "kind": "script",
+    "title": "Step 3.4 - SQLAlchemy: delete by primary key",
+    "commands": [
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "create"
+      ],
+      [
+        "python",
+        "-m",
+        "library_project.infrastructure.lessons.sqlalchemy_lesson",
+        "delete"
+      ]
+    ]
   }
 ]

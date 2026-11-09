@@ -79,6 +79,39 @@ Add a few books, stop the server and start it again: the books are gone, because
 
 The screenshots are made by `bash scripts/screenshots/capture_screenshot.sh --all`, which runs a headless browser in a Docker container (never on your desktop).
 
+### Step 2: the sqlite3 lesson
+
+```bash
+python -m library_project.infrastructure.lessons.sqlite3_lesson create
+python -m library_project.infrastructure.lessons.sqlite3_lesson insert
+python -m library_project.infrastructure.lessons.sqlite3_lesson show
+```
+
+This creates `books-collection.db`, the table `books` and the record "Harry Potter" with plain SQL. Every command can be run again without an error.
+
+| Lesson step | Screenshot |
+| --- | --- |
+| Create the table `books` | ![sqlite3 create](docs/images/step-2-1-sqlite3-create-table.png) |
+| Insert Harry Potter | ![sqlite3 insert](docs/images/step-2-2-sqlite3-insert.png) |
+
+### Step 3: the SQLAlchemy lesson
+
+```bash
+python -m library_project.infrastructure.lessons.sqlalchemy_lesson create
+python -m library_project.infrastructure.lessons.sqlalchemy_lesson read
+python -m library_project.infrastructure.lessons.sqlalchemy_lesson update
+python -m library_project.infrastructure.lessons.sqlalchemy_lesson delete
+```
+
+The same table is described as a Python class (`Book` in `infrastructure/sqlalchemy_models.py`) and the create, read, update and delete operations are written without SQL.
+
+| Lesson step | Screenshot |
+| --- | --- |
+| Model, create table and first record | ![SQLAlchemy create](docs/images/step-3-1-sqlalchemy-create.png) |
+| Read all and read by title | ![SQLAlchemy read](docs/images/step-3-2-sqlalchemy-read.png) |
+| Update by query and by primary key | ![SQLAlchemy update](docs/images/step-3-3-sqlalchemy-update.png) |
+| Delete by primary key | ![SQLAlchemy delete](docs/images/step-3-4-sqlalchemy-delete.png) |
+
 To generate the API documentation (optional):
 
 ```bash
