@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [17e6fda] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — the Mandatory criteria pass for the sqlite3 and SQLAlchemy lesson code. A
 
 [MIL-003]: ../../milestones/mil-003-sqlite-playground.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[17e6fda]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/17e6fda7416be4b4648a0e2f06d4fc5e78160b67
