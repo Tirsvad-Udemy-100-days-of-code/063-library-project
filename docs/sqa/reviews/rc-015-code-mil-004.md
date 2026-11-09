@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [48dc553] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — the Mandatory criteria pass for the persistent library site. Autonomous m
 
 [MIL-004]: ../../milestones/mil-004-sqlalchemy-library-crud.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[48dc553]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/48dc5530769ad796ddc68b465ec0091e89a1f07e
