@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 
 ---
 
@@ -97,3 +97,4 @@ A No-Go on a gateway stops the chain; later windows move by the rework time. S01
 [MIL-003]: ./milestones/mil-003-sqlite-playground.md
 [MIL-004]: ./milestones/mil-004-sqlalchemy-library-crud.md
 [MIL-005]: ./milestones/mil-005-wiki-and-readme.md
+[e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6

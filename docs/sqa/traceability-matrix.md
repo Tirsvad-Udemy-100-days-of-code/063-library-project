@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 
 ---
 
@@ -71,3 +71,4 @@ No view artifacts exist yet, so every concern is a Gap until the milestones deli
 [RC-007]: ./reviews/rc-007-mil-004-sqlalchemy-library-crud.md
 [RC-008]: ./reviews/rc-008-mil-005-wiki-and-readme.md
 [RC-009]: ./reviews/rc-009-business-case-delta.md
+[e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6

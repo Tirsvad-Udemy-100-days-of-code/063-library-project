@@ -11,7 +11,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 
 ---
 
@@ -76,3 +76,4 @@ A Flask app in `src/` with `index.html` and `add.html` templates where books liv
 [BC-001]: ../business-case.md
 [PP-001]: ../project-plan.md
 [MIL-001]: ./mil-001-project-setup.md
+[e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6
