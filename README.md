@@ -112,6 +112,22 @@ The same table is described as a Python class (`Book` in `infrastructure/sqlalch
 | Update by query and by primary key | ![SQLAlchemy update](docs/images/step-3-3-sqlalchemy-update.png) |
 | Delete by primary key | ![SQLAlchemy delete](docs/images/step-3-4-sqlalchemy-delete.png) |
 
+### Step 4: the library website with a database
+
+```bash
+python -m library_project.main
+```
+
+The books are now stored in `books-collection.db` (in the Flask `instance` folder), so they are still there after a restart. The home page lists every book with an **Edit Rating** link and a **Delete** link.
+
+| Step | Screenshot |
+| --- | --- |
+| Add a book at `/add` | ![Add book](docs/images/step-4-1-add-book.png) |
+| The home page lists the books from the database | ![Library list](docs/images/step-4-2-library-list.png) |
+| Edit the rating of one book | ![Edit rating](docs/images/step-4-3-edit-rating.png) |
+| The new rating is shown | ![Rating changed](docs/images/step-4-4-rating-changed.png) |
+| Delete a book | ![Book deleted](docs/images/step-4-5-book-deleted.png) |
+
 To generate the API documentation (optional):
 
 ```bash

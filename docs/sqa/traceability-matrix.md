@@ -28,7 +28,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 | [MIL-001] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-004], [RC-012] |
 | [MIL-002] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-005], [RC-013] |
 | [MIL-003] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-006], [RC-014] |
-| [MIL-004] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-007] |
+| [MIL-004] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-007], [RC-015] |
 | [MIL-005] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-008] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] | [RC-010] |
 | [ADR-0002] | ADR | - | - | [BC-001], [SA-001] | [MIL-001] | [RC-011] |
@@ -83,3 +83,4 @@ No view artifacts exist yet, so every concern is a Gap until the milestones deli
 [982abab]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/982abab59b0f2bfbc32ffbf96ae1eb41651bbb64
 [RC-013]: ./reviews/rc-013-code-mil-002.md
 [RC-014]: ./reviews/rc-014-code-mil-003.md
+[RC-015]: ./reviews/rc-015-code-mil-004.md

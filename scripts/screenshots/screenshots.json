@@ -213,5 +213,215 @@
         "delete"
       ]
     ]
+  },
+  {
+    "name": "step-4-1-add-book",
+    "kind": "web",
+    "app": "library",
+    "actions": [
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9.3"
+      }
+    ]
+  },
+  {
+    "name": "step-4-2-library-list",
+    "kind": "web",
+    "app": "library",
+    "actions": [
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9.3"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "The Hobbit"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. R. R. Tolkien"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "8.5"
+      },
+      {
+        "click": "text=Add Book"
+      }
+    ]
+  },
+  {
+    "name": "step-4-3-edit-rating",
+    "kind": "web",
+    "app": "library",
+    "actions": [
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9.3"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "The Hobbit"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. R. R. Tolkien"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "8.5"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "click": "text=Edit Rating"
+      }
+    ]
+  },
+  {
+    "name": "step-4-4-rating-changed",
+    "kind": "web",
+    "app": "library",
+    "actions": [
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9.3"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "The Hobbit"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. R. R. Tolkien"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "8.5"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "click": "text=Edit Rating"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "10"
+      },
+      {
+        "click": "text=Change Rating"
+      }
+    ]
+  },
+  {
+    "name": "step-4-5-book-deleted",
+    "kind": "web",
+    "app": "library",
+    "actions": [
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "Harry Potter"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. K. Rowling"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "9.3"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "goto": "/add"
+      },
+      {
+        "fill": "input[name=title]",
+        "value": "The Hobbit"
+      },
+      {
+        "fill": "input[name=author]",
+        "value": "J. R. R. Tolkien"
+      },
+      {
+        "fill": "input[name=rating]",
+        "value": "8.5"
+      },
+      {
+        "click": "text=Add Book"
+      },
+      {
+        "click": "text=Delete"
+      }
+    ]
   }
 ]
