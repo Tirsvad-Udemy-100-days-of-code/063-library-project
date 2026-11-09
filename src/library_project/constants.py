@@ -32,3 +32,11 @@ SQLITE_LESSON_DATABASE = "books-collection.db"
 SQLALCHEMY_LESSON_DATABASE_URI = "sqlite:///new-books-collection.db"
 LIBRARY_DATABASE_URI = "sqlite:///books-collection.db"
 BOOKS_TABLE = "books"
+
+# Lesson sample data (the Harry Potter row used by both database lessons)
+LESSON_BOOK_ID = 1
+LESSON_BOOK_TITLE = "Harry Potter"
+LESSON_BOOK_AUTHOR = "J. K. Rowling"
+LESSON_BOOK_RATING = 9.3
+LESSON_RENAMED_BY_QUERY_TITLE = "Harry Potter and the Chamber of Secrets"
+LESSON_RENAMED_BY_KEY_TITLE = "Harry Potter and the Goblet of Fire"
