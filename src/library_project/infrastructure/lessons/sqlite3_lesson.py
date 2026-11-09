@@ -38,6 +38,8 @@ def create_table(database: str | Path = constants.SQLITE_LESSON_DATABASE) -> Non
     """@brief Create the books table when it does not exist yet."""
     with closing(sqlite3.connect(database)) as connection:
         cursor = connection.cursor()
+        # constant SQL built from project constants, no user input
+        # nosemgrep: opengrep.rules.python.sqlalchemy.security.sqlalchemy-execute-raw-query  # noqa: E501
         cursor.execute(CREATE_TABLE_SQL)
         connection.commit()
 
@@ -48,6 +50,8 @@ def insert_harry_potter(
     """@brief Insert the lesson book; a second run leaves the table unchanged."""
     with closing(sqlite3.connect(database)) as connection:
         cursor = connection.cursor()
+        # constant SQL with bound parameters, no user input
+        # nosemgrep: opengrep.rules.python.sqlalchemy.security.sqlalchemy-execute-raw-query  # noqa: E501
         cursor.execute(
             INSERT_BOOK_SQL,
             (
@@ -64,6 +68,8 @@ def read_rows(database: str | Path = constants.SQLITE_LESSON_DATABASE) -> list[B
     """@brief Return every row of the books table ordered by id."""
     with closing(sqlite3.connect(database)) as connection:
         cursor = connection.cursor()
+        # constant SQL built from project constants, no user input
+        # nosemgrep: opengrep.rules.python.sqlalchemy.security.sqlalchemy-execute-raw-query  # noqa: E501
         cursor.execute(SELECT_BOOKS_SQL)
         return [(row[0], row[1], row[2], row[3]) for row in cursor.fetchall()]
 
