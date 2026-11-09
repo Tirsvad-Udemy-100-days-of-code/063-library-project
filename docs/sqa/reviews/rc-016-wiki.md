@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [3180fee] |
 
 ---
 
@@ -57,3 +57,4 @@ Go-with-conditions — all Mandatory criteria pass except criterion 14, which is
 
 [MIL-005]: ../../milestones/mil-005-wiki-and-readme.md
 [QC-WIKI-001]: ../../../framework/qc/artifacts/qc-wiki.md
+[3180fee]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/3180feed45e4c263c2a4339ca8003e68491222f0
