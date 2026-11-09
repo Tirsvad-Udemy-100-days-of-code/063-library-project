@@ -24,6 +24,8 @@ The project follows the lecture in four steps. Each step is a milestone with its
 | 3 | The SQLAlchemy lesson: model, create, read, update and delete |
 | 4 | The library website with a SQLite database: add, list, edit rating, delete |
 
+Every step has a page in the [wiki][wiki] with its screenshots and what we gained, in three languages: [English][wiki-en], [Dansk][wiki-da] and [Bahasa Malaysia][wiki-ms].
+
 The code is in `src/library_project/`, split in layers (`domain`, `application`, `infrastructure`, `presentation`), the tests are in `tests/`, and the project documents are in `docs/`. Constants are in `src/library_project/constants.py`. Source comments use Doxygen tags; `Doxyfile` generates the API documentation.
 
 ## 📋 Requirements
@@ -175,6 +177,10 @@ The documents a newcomer needs, in reading order.
 
 [repository]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project
 [documentation]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki
+[wiki]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki
+[wiki-en]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki/Home
+[wiki-da]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki/Home-da
+[wiki-ms]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki/Home-ms
 [issues]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/issues
 [license]: ./LICENSE
 [BC-001]: ./docs/business-case.md
