@@ -9,7 +9,7 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | pending |
+| 2026-11-09 | Proposed | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [f7a2f6e] |
 
 ---
 
@@ -59,3 +59,4 @@ Go — the Mandatory criteria pass for the step 1 code (site with the in-memory 
 
 [MIL-002]: ../../milestones/mil-002-in-memory-library.md
 [QC-PY-001]: ../../../framework/qc/code/qc-programming-python.md
+[f7a2f6e]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/f7a2f6eeda1b2a4870e7cfa4de8f1e7e555fb928
