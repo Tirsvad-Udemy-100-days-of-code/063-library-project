@@ -27,6 +27,21 @@ APPS = {
 }
 
 
+def reset_databases() -> None:
+    """@brief Delete every lecture database so that each step starts empty.
+
+    Flask-SQLAlchemy keeps a relative SQLite file in the Flask instance folder, which
+    is not the working directory for an installed package, so the files are found
+    by name.
+    """
+    shutil.rmtree("instance", ignore_errors=True)
+    subprocess.run(
+        ["find", "/", "-xdev", "-name", "*.db", "-not", "-path", "/proc/*", "-delete"],
+        check=False,
+        capture_output=True,
+    )
+
+
 def wait_for_server() -> None:
     """@brief Wait until the app answers on BASE_URL."""
     for _ in range(100):
@@ -53,6 +68,7 @@ def run_actions(page: Page, actions: list[dict[str, str]]) -> None:
             page.fill(action["fill"], action["value"])
         elif "click" in action:
             page.click(action["click"])
+            page.wait_for_load_state("load")
 
 
 def capture_web(step: dict[str, object]) -> None:
@@ -60,7 +76,7 @@ def capture_web(step: dict[str, object]) -> None:
 
     @param step A step definition from screenshots.json.
     """
-    shutil.rmtree("instance", ignore_errors=True)
+    reset_databases()
     # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
     server = subprocess.Popen(APPS[str(step["app"])])  # fixed commands from APPS
     try:
@@ -81,9 +97,7 @@ def capture_script(step: dict[str, object]) -> None:
 
     @param step A step definition from screenshots.json.
     """
-    shutil.rmtree("instance", ignore_errors=True)
-    for path in Path(".").glob("*.db"):
-        path.unlink()
+    reset_databases()
     lines = []
     for command in step["commands"]:  # type: ignore[attr-defined]
         # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
