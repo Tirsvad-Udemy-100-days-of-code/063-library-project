@@ -59,7 +59,25 @@ To leave the environment, run `deactivate`.
 
 ## ▶️ Run
 
-Run commands are added as each step is delivered. Start a step from the project root with the environment active, then open <http://127.0.0.1:5000>.
+Start a step from the project root with the environment active, then open <http://127.0.0.1:5000>.
+
+### Step 1: books in an in-memory list
+
+```bash
+python -m library_project.main_in_memory
+```
+
+Add a few books, stop the server and start it again: the books are gone, because they only live in the list `all_books`. That is why the next steps add a database.
+
+| Challenge | Screenshot |
+| --- | --- |
+| 1. Heading and "Add New Book" link | ![Home page](docs/images/step-1-1-home.png) |
+| 2. The `/add` form | ![Add form](docs/images/step-1-2-add-form.png) |
+| 3. The form adds a dictionary to `all_books` | ![Filled form](docs/images/step-1-3-add-book.png) |
+| 4. Books as `<li>` in a `<ul>` | ![Book list](docs/images/step-1-4-book-list.png) |
+| 5. "Library is empty." message | ![Empty library](docs/images/step-1-5-empty-library.png) |
+
+The screenshots are made by `bash scripts/screenshots/capture_screenshot.sh --all`, which runs a headless browser in a Docker container (never on your desktop).
 
 To generate the API documentation (optional):
 

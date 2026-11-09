@@ -1,0 +1,48 @@
+[
+  {
+    "name": "step-1-1-home",
+    "kind": "web",
+    "app": "in_memory",
+    "actions": [{"goto": "/"}]
+  },
+  {
+    "name": "step-1-2-add-form",
+    "kind": "web",
+    "app": "in_memory",
+    "actions": [{"goto": "/add"}]
+  },
+  {
+    "name": "step-1-3-add-book",
+    "kind": "web",
+    "app": "in_memory",
+    "actions": [
+      {"goto": "/add"},
+      {"fill": "input[name=title]", "value": "Harry Potter"},
+      {"fill": "input[name=author]", "value": "J. K. Rowling"},
+      {"fill": "input[name=rating]", "value": "9"}
+    ]
+  },
+  {
+    "name": "step-1-4-book-list",
+    "kind": "web",
+    "app": "in_memory",
+    "actions": [
+      {"goto": "/add"},
+      {"fill": "input[name=title]", "value": "Harry Potter"},
+      {"fill": "input[name=author]", "value": "J. K. Rowling"},
+      {"fill": "input[name=rating]", "value": "9"},
+      {"click": "text=Add Book"},
+      {"goto": "/add"},
+      {"fill": "input[name=title]", "value": "The Hobbit"},
+      {"fill": "input[name=author]", "value": "J. R. R. Tolkien"},
+      {"fill": "input[name=rating]", "value": "8.5"},
+      {"click": "text=Add Book"}
+    ]
+  },
+  {
+    "name": "step-1-5-empty-library",
+    "kind": "web",
+    "app": "in_memory",
+    "actions": [{"goto": "/"}]
+  }
+]

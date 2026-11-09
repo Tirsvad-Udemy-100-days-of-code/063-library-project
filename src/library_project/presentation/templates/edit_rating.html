@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ c.LINK_EDIT_RATING }}</title>
+</head>
+<body>
+  <h1>{{ book.title }}</h1>
+  {% if error %}
+  <p class="error">{{ error }}</p>
+  {% endif %}
+  <form action="{{ c.ROUTE_EDIT }}?id={{ book.book_id }}" method="POST">
+    <label for="rating">New Rating</label>
+    <input id="rating" type="number" step="any" name="rating" value="{{ book.rating }}" required>
+    <button type="submit">{{ c.BUTTON_CHANGE_RATING }}</button>
+  </form>
+</body>
+</html>
