@@ -34,10 +34,12 @@ def create_app(repository: BookRepository, *, editable: bool = False) -> Flask:
     """
     app = Flask(__name__, template_folder="templates")
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.context_processor
     def inject_constants() -> dict[str, object]:
         return {"c": constants, "editable": editable}
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.errorhandler(BookNotFoundError)
     def book_not_found(_error: BookNotFoundError) -> tuple[str, int]:
         return "Book not found.", NOT_FOUND
@@ -52,10 +54,12 @@ def create_app(repository: BookRepository, *, editable: bool = False) -> Flask:
 def _register_adding(app: Flask, repository: BookRepository) -> None:
     """@brief Add the home and add routes."""
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.get(constants.ROUTE_HOME)
     def home() -> str:
         return render_template(INDEX_TEMPLATE, books=use_cases.list_books(repository))
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.route(constants.ROUTE_ADD, methods=["GET", "POST"])
     def add() -> str | Response | tuple[str, int]:
         if request.method == "GET":
@@ -83,6 +87,7 @@ def _book_id_from_query() -> int:
 def _register_editing(app: Flask, repository: EditableBookRepository) -> None:
     """@brief Add the edit and delete routes."""
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.route(constants.ROUTE_EDIT, methods=["GET", "POST"])
     def edit() -> str | Response | tuple[str, int]:
         book_id = _book_id_from_query()
@@ -98,6 +103,7 @@ def _register_editing(app: Flask, repository: EditableBookRepository) -> None:
             )
         return redirect(constants.ROUTE_HOME)
 
+    # nosemgrep: opengrep.rules.python.lang.maintainability.useless-inner-function
     @app.get(constants.ROUTE_DELETE)
     def delete() -> Response:
         use_cases.remove_book(repository, _book_id_from_query())
