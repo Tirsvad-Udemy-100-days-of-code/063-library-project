@@ -14,7 +14,7 @@
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added CrossReference to SA-001 | [e02e021] |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion SC8, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | [75ef216] |
 
 ---
 
@@ -146,3 +146,4 @@ Proceed — the scope is small, fully specified by the lesson, and every part ca
 [PP-001]: ./project-plan.md
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
 [351a3e9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/351a3e9cd72ecaafcfc8ccd09c480433fae0c21a
+[75ef216]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/75ef216785468b3a3a81602bc20864cd385accfb

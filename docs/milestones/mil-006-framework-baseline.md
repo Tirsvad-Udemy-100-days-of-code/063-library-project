@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version; accepted with the Go verdict of the review record (autonomous, not independent) | [351a3e9] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | [75ef216] |
 
 ---
 
@@ -82,3 +82,4 @@ A merged pull request that holds: the updated Business Case, Project Plan, Artif
 [PP-001]: ../project-plan.md
 [MIL-005]: ./mil-005-wiki-and-readme.md
 [351a3e9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/351a3e9cd72ecaafcfc8ccd09c480433fae0c21a
+[75ef216]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/75ef216785468b3a3a81602bc20864cd385accfb
