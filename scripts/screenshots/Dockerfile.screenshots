@@ -1,3 +1,9 @@
 FROM python:3.13-slim
+# The browsers go to a shared folder, so the unprivileged user below can read them.
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 RUN pip install --no-cache-dir playwright==1.55.0 \
-    && playwright install --with-deps chromium
+    && playwright install --with-deps chromium \
+    && chmod -R a+rX /ms-playwright
+# Run as an unprivileged user, not as root.
+RUN useradd --create-home --uid 1000 screenshots
+USER screenshots
