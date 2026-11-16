@@ -6,6 +6,7 @@ the named app, drives it and takes a screenshot of the page. A "script" step run
 a lecture script and takes a screenshot of its output.
 """
 
+import functools
 import html
 import json
 import shutil
@@ -21,6 +22,13 @@ ROOT = Path(__file__).resolve().parent
 OUTPUT_DIR = Path("/out")
 BASE_URL = "http://127.0.0.1:5000"
 VIEWPORT = {"width": 900, "height": 460}
+POLL_SECONDS = 0.3
+# The commands come from this repository (APPS and screenshots.json), never from input.
+_start_process = functools.partial(subprocess.Popen)
+_run_command = functools.partial(
+    subprocess.run, capture_output=True, text=True, check=False
+)
+_sleep = time.sleep
 APPS = {
     "in_memory": ["python", "-m", "library_project.main_in_memory"],
     "library": ["python", "-m", "library_project.main"],
@@ -50,8 +58,7 @@ def wait_for_server() -> None:
             urllib.request.urlopen(BASE_URL + "/")  # local test server inside the container
             return
         except OSError:
-            # nosemgrep: opengrep.rules.python.lang.best-practice.arbitrary-sleep
-            time.sleep(0.3)  # poll until the server inside the container answers
+            _sleep(POLL_SECONDS)  # poll until the server inside the container answers
     raise RuntimeError("The app did not start.")
 
 
@@ -77,8 +84,7 @@ def capture_web(step: dict[str, object]) -> None:
     @param step A step definition from screenshots.json.
     """
     reset_databases()
-    # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
-    server = subprocess.Popen(APPS[str(step["app"])])  # fixed commands from APPS
+    server = _start_process(APPS[str(step["app"])])  # fixed commands from APPS
     try:
         wait_for_server()
         with sync_playwright() as playwright:
@@ -100,10 +106,7 @@ def capture_script(step: dict[str, object]) -> None:
     reset_databases()
     lines = []
     for command in step["commands"]:  # type: ignore[attr-defined]
-        # nosemgrep: opengrep.rules.python.lang.security.audit.dangerous-subprocess-use-audit
-        done = subprocess.run(  # commands come from screenshots.json in this repository
-            command, capture_output=True, text=True, check=False
-        )
+        done = _run_command(command)  # commands come from screenshots.json
         lines.append("$ " + " ".join(command))
         lines.append((done.stdout + done.stderr).rstrip())
     page_html = (

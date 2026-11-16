@@ -29,9 +29,9 @@ INSERT_BOOK_SQL = (
     f"INSERT OR IGNORE INTO {constants.BOOKS_TABLE} "
     "(id, title, author, rating) VALUES (?, ?, ?, ?)"
 )
-SELECT_BOOKS_SQL = (
-    f"SELECT id, title, author, rating FROM {constants.BOOKS_TABLE} ORDER BY id"
-)
+# A plain literal, so that the statement is visibly constant (the table is `books`,
+# the value of constants.BOOKS_TABLE; the tests read the rows back).
+SELECT_BOOKS_SQL = "SELECT id, title, author, rating FROM books ORDER BY id"
 
 
 def create_table(database: str | Path = constants.SQLITE_LESSON_DATABASE) -> None:
@@ -68,8 +68,7 @@ def read_rows(database: str | Path = constants.SQLITE_LESSON_DATABASE) -> list[B
     """@brief Return every row of the books table ordered by id."""
     with closing(sqlite3.connect(database)) as connection:
         cursor = connection.cursor()
-        # constant SQL built from project constants, no user input
-        # nosemgrep: opengrep.rules.python.sqlalchemy.security.sqlalchemy-execute-raw-query  # noqa: E501
+        # constant SQL, no user input
         cursor.execute(SELECT_BOOKS_SQL)
         return [(row[0], row[1], row[2], row[3]) for row in cursor.fetchall()]
 
