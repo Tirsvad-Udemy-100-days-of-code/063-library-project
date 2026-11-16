@@ -26,7 +26,7 @@ The project follows the lecture in four steps. Each step is a milestone with its
 
 Every step has a page in the [wiki][wiki] with its screenshots and what we gained, in three languages: [English][wiki-en], [Dansk][wiki-da] and [Bahasa Malaysia][wiki-ms].
 
-The code is in `src/library_project/`, split in layers (`domain`, `application`, `infrastructure`, `presentation`), the tests are in `tests/`, and the project documents are in `docs/`. Constants are in `src/library_project/constants.py`. Source comments use Doxygen tags; `Doxyfile` generates the API documentation.
+The code is in `src/library_project/`, split in layers (`domain`, `application`, `infrastructure`, `presentation`), the tests are in `tests/`, and the project documents are in `docs/`. Constants are in `src/library_project/constants.py`. Source comments use Doxygen tags; `Doxyfile` generates the API documentation. The SQA and QC framework that the project documents follow is in `framework/` (a git submodule). `.editorconfig` holds the editor settings of the framework baseline and `.env.example` the placeholders for the git host tokens that the framework scripts read; the program itself reads no `.env` file and no environment variable.
 
 ## 📋 Requirements
 
@@ -150,7 +150,7 @@ python -m ruff check src tests
 
 ## 📄 License
 
-GNU Affero General Public License v3, see [LICENSE][license].
+GNU Affero General Public License v3.0 or later (AGPL-3.0-or-later), see [LICENSE][license].
 
 ## 🔗 Links
 
@@ -170,8 +170,6 @@ The documents a newcomer needs, in reading order.
 | [Milestones][milestones] | One document per gateway: Go/No-Go criteria and tasks |
 | [Artifact registry][registry] | Where each artifact type lives, the next version, the PO language and domain |
 | [Traceability matrix][TM-001] | How the artifacts link and when each was last reviewed |
-| [Framework README][framework-readme] | The framework this project uses |
-| [Framework changelog][framework-changelog] | What changed in each framework release |
 
 ---
 
@@ -189,5 +187,3 @@ The documents a newcomer needs, in reading order.
 [milestones]: ./docs/milestones/
 [registry]: ./docs/artifact-registry.md
 [TM-001]: ./docs/sqa/traceability-matrix.md
-[framework-readme]: ./framework/README.md
-[framework-changelog]: ./framework/CHANGELOG.md

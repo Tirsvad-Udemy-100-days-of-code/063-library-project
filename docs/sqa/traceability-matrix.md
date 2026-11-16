@@ -4,13 +4,14 @@
 | Key | Value |
 | --- | --- |
 | ID | TM-001 |
-| CrossReference | [BC-001], [SA-001], [PP-001], [ADR-0001], [ADR-0002] |
+| CrossReference | [BC-001], [SA-001], [PP-001], [MIL-006], [ADR-0001], [ADR-0002] |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
+| 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and the wiki with the review records RC-017 to RC-020, moved the domain of BC-001 and PP-001 to education; reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -22,14 +23,16 @@ Tracks backward and forward links between artifact instances so that the Busines
 
 | Artifact Instance | Type | Language | Domain | Upstream (Backward Link) | Downstream (Forward Link) | Last Reviewed (RC-ID) |
 | --- | --- | --- | --- | --- | --- | --- |
-| [BC-001] | Business Case | en | it | - | [SA-001], [PP-001] | [RC-001], [RC-009] |
+| [BC-001] | Business Case | en | education | - | [SA-001], [PP-001], [MIL-006] | [RC-017], [RC-001], [RC-009] |
 | [SA-001] | Stakeholder Analysis | en | it | [BC-001] | [PP-001] | [RC-002] |
-| [PP-001] | Project Plan | en | it | [BC-001], [SA-001] | MIL-001 to MIL-005 | [RC-003] |
+| [PP-001] | Project Plan | en | education | [BC-001], [SA-001] | MIL-001 to MIL-006 | [RC-018], [RC-003] |
 | [MIL-001] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-004], [RC-012] |
 | [MIL-002] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-005], [RC-013] |
 | [MIL-003] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-006], [RC-014] |
 | [MIL-004] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-007], [RC-015] |
 | [MIL-005] | Milestone / Gateway | en | it | [BC-001], [PP-001] | tasks (issues) | [RC-008], [RC-016] |
+| [MIL-006] | Milestone / Gateway | en | education | [BC-001], [PP-001], [MIL-005] | tasks (issues) | [RC-019] |
+| Wiki | Wiki | en, da, ms | education | [BC-001], [MIL-005] | - | [RC-020], [RC-016] |
 | [ADR-0001] | ADR | - | - | [BC-001], [PP-001] | [MIL-001] | [RC-010] |
 | [ADR-0002] | ADR | - | - | [BC-001], [SA-001] | [MIL-001] | [RC-011] |
 
@@ -54,6 +57,8 @@ Tracks backward and forward links between artifact instances so that the Busines
 ## Coverage Notes
 
 No view artifacts exist yet, so every concern is a Gap until the milestones deliver code, tests and the wiki. `-` in Last Reviewed means no `RC-*` exists yet.
+
+The domain of BC-001, PP-001 and MIL-006 is `education` since MIL-006; the other documents keep the domain `it` they were accepted with (see the Open Issues of PP-001). MIL-006 adds no view, so the status of the concerns does not change. It changes no source, test, screenshot or wiki file. The wiki has a row of its own here (it is reviewed in [RC-020]). The framework has no quality checklist for this matrix, so it has no review record of its own. The review records RC-001 to RC-020 are not rows themselves.
 
 ---
 
@@ -85,3 +90,8 @@ No view artifacts exist yet, so every concern is a Gap until the milestones deli
 [RC-014]: ./reviews/rc-014-code-mil-003.md
 [RC-015]: ./reviews/rc-015-code-mil-004.md
 [RC-016]: ./reviews/rc-016-wiki.md
+[MIL-006]: ../milestones/mil-006-framework-baseline.md
+[RC-017]: ./reviews/rc-017-business-case-baseline.md
+[RC-018]: ./reviews/rc-018-project-plan-baseline.md
+[RC-019]: ./reviews/rc-019-milestone-006.md
+[RC-020]: ./reviews/rc-020-wiki-baseline.md
