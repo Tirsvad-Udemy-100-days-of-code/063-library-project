@@ -11,7 +11,7 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and the wiki with the review records RC-017 to RC-020, moved the domain of BC-001 and PP-001 to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and the wiki with the review records RC-017 to RC-020, moved the domain of BC-001 and PP-001 to education; reviewed in autonomous mode, not independent | [351a3e9] |
 
 ---
 
@@ -95,3 +95,4 @@ The domain of BC-001, PP-001 and MIL-006 is `education` since MIL-006; the other
 [RC-018]: ./reviews/rc-018-project-plan-baseline.md
 [RC-019]: ./reviews/rc-019-milestone-006.md
 [RC-020]: ./reviews/rc-020-wiki-baseline.md
+[351a3e9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/351a3e9cd72ecaafcfc8ccd09c480433fae0c21a

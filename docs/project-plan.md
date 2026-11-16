@@ -12,7 +12,7 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G6 (MIL-006) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #41, the tracked prompt log, the review record RC-016, the stale link of RC-009, the new traceability matrix rows and the CI in the Planning Assumptions and Open Issues; replaced the empty milestone column of G1 to G5 by the links to the milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | pending |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G6 (MIL-006) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #41, the tracked prompt log, the review record RC-016, the stale link of RC-009, the new traceability matrix rows and the CI in the Planning Assumptions and Open Issues; replaced the empty milestone column of G1 to G5 by the links to the milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
 
 ---
 
@@ -123,3 +123,4 @@ A No-Go on a gateway stops the chain; later windows move by the rework time. S01
 [ms-406]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/milestone/406
 [MIL-006]: ./milestones/mil-006-framework-baseline.md
 [ms-584]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/milestone/584
+[351a3e9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/351a3e9cd72ecaafcfc8ccd09c480433fae0c21a
