@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=75"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -16,6 +16,11 @@ dependencies = [
     "flask>=3.1",
     "flask-sqlalchemy>=3.1",
 ]
+
+[project.urls]
+Repository = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project"
+Documentation = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/wiki"
+"Issue tracker" = "https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/issues"
 
 [project.optional-dependencies]
 dev = [

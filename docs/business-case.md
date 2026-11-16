@@ -4,15 +4,17 @@
 | Key | Value |
 | --- | --- |
 | ID | BC-001 |
-| CrossReference | [SA-001] |
+| CrossReference | [SA-001], [PP-001], [MIL-006] |
 | Language | en |
-| Domain | it |
+| Domain | education |
 
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
-| 2026-11-09 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added CrossReference to SA-001 | [e02e021] |
+| 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added CrossReference to SA-001 | [e02e021] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion SC8, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | [75ef216] |
 
 ---
 
@@ -40,6 +42,7 @@ A single repository that mirrors the lecture steps lets the participant keep a r
 - O4: Provide Python project hygiene: Python 3.13 or newer, venv, pytest, `pyproject.toml`, `constants.py`, `.gitignore`, Doxygen comments and a Doxyfile.
 - O5: Provide a README (framework template) and a wiki in English, Danish and Bahasa Malaysia with a screenshot and a "what we gained" text for each lecture step.
 - O6: Publish the repository with a description and topics on the git host.
+- O7: Bring the finished project to the common baseline of the framework: the adopted framework release, a README that lists only the documents of the repository, project URL metadata, the editor settings of the baseline, an `.env.example` in the framework's form, a screenshot tool that passes the shared checks and runs as an unprivileged user, and a traceability matrix that covers the new documents ([MIL-006]).
 
 ## Scope
 
@@ -49,12 +52,14 @@ A single repository that mirrors the lecture steps lets the participant keep a r
 - Playground scripts for sqlite3 and SQLAlchemy as taught in the lessons.
 - pytest tests for every step, a README, a three-language wiki, screenshots per lecture step.
 - Repository description and topics.
+- The baseline milestone [MIL-006]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, the formatting and the unprivileged user of the screenshot tool, the fix of the findings of the OpenGrep check (without a suppression), the update of the traceability matrix, review records and a review of the wiki. It changes no behaviour of the program.
 
 ### Out of Scope
 
 - Authentication, deployment, styling beyond the assignment templates, a REST API.
 - Any runtime dependency other than Flask and Flask-SQLAlchemy (with SQLAlchemy).
 - Use cases and user stories as formal artifacts (see PP-001 Open Issues).
+- Any change to `tests/`, `docs/images/` or the wiki pages in the baseline milestone [MIL-006], and any change to `src/` other than the behaviour-neutral fix of the OpenGrep findings in `presentation/web.py` and `infrastructure/lessons/sqlite3_lesson.py`. That milestone starts no site for the library, adds no book, retakes no screenshot of the repository and runs the tests only; the container image of the screenshot tool is built and tried once with a scratch output folder.
 
 ## Expected Benefits
 
@@ -83,6 +88,7 @@ The project supports the participant's learning goal (the bootcamp) and the port
 | SC5 | Wiki languages | en, da, ms pages for every step | Wiki page list |
 | SC6 | Screenshots | One per lecture step in README and wiki | Files under `docs/images/` |
 | SC7 | Repository metadata | Description and at least five topics set | Git host repository page |
+| SC8 | The baseline milestone is done (objective O7) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass, the OpenGrep check without a suppression | The script exit codes and the pull request status on the git host |
 
 ## Risks
 
@@ -93,6 +99,7 @@ The project supports the participant's learning goal (the bootcamp) and the port
 | Tokens in `.env` leak into the repository | Security defect | `.env` is in `.gitignore`; tokens are never printed, tested or imported |
 | Danish and Bahasa Malaysia text is machine-quality | Reader confusion | Keep sentences short; the Product Owner reviews the language pages |
 | Assignment function names conflict with clean layering | Hard to compare solutions | An Architecture Decision Record (ADR) keeps the assignment names at the web layer and layers the rest |
+| The documents of the baseline milestone [MIL-006] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `tests/` is not changed, `src/` changes only for the behaviour-neutral fix of the OpenGrep findings, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 
@@ -109,6 +116,8 @@ The project supports the participant's learning goal (the bootcamp) and the port
 - One pull request per milestone, from a branch.
 - Tokens are read from `.env` for personal use only; `.env` is not committed, tested or imported by the project.
 - Target end date 2026-11-20.
+- The baseline milestone [MIL-006] starts 2026-11-16 and is finished within one week, by 2026-11-23, so the end date of the project moves from 2026-11-20 to 2026-11-23. An AI stand-in for S01 reviews and accepts the changed documents.
+- The domain of the Business Case, the Project Plan and [MIL-006] is education since [MIL-006] (it was information technology (IT) until then; the documents that [MIL-006] does not change keep the domain `it`, see the Open Issues of [PP-001]).
 
 ## Cost–Benefit Assessment
 
@@ -134,3 +143,7 @@ Proceed — the scope is small, fully specified by the lesson, and every part ca
 
 [SA-001]: ./stakeholder-analysis.md
 [e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6
+[PP-001]: ./project-plan.md
+[MIL-006]: ./milestones/mil-006-framework-baseline.md
+[351a3e9]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/351a3e9cd72ecaafcfc8ccd09c480433fae0c21a
+[75ef216]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/75ef216785468b3a3a81602bc20864cd385accfb

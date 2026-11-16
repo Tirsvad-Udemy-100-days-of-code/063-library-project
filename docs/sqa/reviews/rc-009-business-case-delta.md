@@ -44,3 +44,4 @@ Go — the change only adds the CrossReference. Autonomous mode: the reviewer is
 [RC-001]: ./rc-001-business-case.md
 [QC-BC-001]: ../../../framework/qc/artifacts/qc-business-case.md
 [e02e021]: https://git.tirsystem.com/Tirsvad-Udemy-100-days-of-code/063-library-project/commit/e02e021cc1ba355061ecedf65df446c90006a8a6
+[SA-001]: ../../stakeholder-analysis.md
