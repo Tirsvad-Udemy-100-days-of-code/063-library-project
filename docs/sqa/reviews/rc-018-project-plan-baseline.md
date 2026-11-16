@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Reviewed again after the amendment of the Business Case, Project Plan and milestone for the OpenGrep fix (autonomous, not independent) | pending |
 
 ---
 
@@ -35,7 +36,7 @@
 | 7 | Owners, reviewers and escalation roles use Stakeholder Analysis IDs and match the governance RACI | Pass | Owner S01 is a stakeholder ID of SA-001. The project has no governance document (ADR-0001 records this), so there is no RACI to contradict; no invented role names are used. |
 | 8 | Planning assumptions are listed with their source, and a changed baseline is recorded with its reason | Pass | Each planning assumption names its source (a Business Case section, the Stakeholder Analysis or a decision of S01); the move of the end date is recorded with its reason, the baseline of the framework. |
 | 9 | Plan risks are listed with impact and a mitigation, and trace to Business Case risks where they come from there | Pass | Plan Risks give impact and mitigation for each of the four risks; the CI risk of MIL-006 traces to SC8 of BC-001. |
-| 10 | Open issues are listed, and none contradicts a statement elsewhere in the plan | Pass | Open Issues list the earlier points and add the domain of the unchanged documents, the open pull request #41 that the baseline does not close, the tracked prompt log, RC-016, the link of RC-009, the existing suppression markers and the missing checklist for the traceability matrix; no remaining statement contradicts another. |
+| 10 | Open issues are listed, and none contradicts a statement elsewhere in the plan | Pass | Open Issues list the earlier points and add the domain of the unchanged documents, the open pull request #41 that the baseline does not close, the tracked prompt log, RC-016, the link of RC-009, the markers that did not suppress together with the OpenGrep fix, and the missing checklist for the traceability matrix; no remaining statement contradicts another. |
 | 11 | Each gateway's main deliverable is stated and matches the deliverable of its `MIL-*` document | Pass | The main deliverable of MIL-006 names the same items as its Deliverable section; the rows of G1 to G5 keep their text and match their milestone documents (only the empty milestone column now links the milestones of the host). |
 | 12 | Gateways that deliver user stories name them, and those that do not say why | Pass | The Stories column says `none` with its reason for every gateway, as the earlier rows do. |
 | 13 | The schedule view (table, Gantt) and the dependency view agree with each other | Pass | The Gantt bar of the baseline uses the dates of the schedule table. The bars of the earlier gateways were not changed here (this is an optional criterion). |
@@ -59,7 +60,7 @@
 
 ## Overall Verdict
 
-Go — every Mandatory criterion of QC-PP-001 and QC-LANG-001 passes; the domain of the unchanged documents, pull request #41, the tracked prompt log, RC-016, the link of RC-009, the existing suppression markers and the missing checklist for the traceability matrix are recorded as Open Issues. Review of the whole document after the edits of this change.
+Go — every Mandatory criterion of QC-PP-001 and QC-LANG-001 passes; the domain of the unchanged documents, pull request #41, the tracked prompt log, RC-016, the link of RC-009, the markers that did not suppress together with the OpenGrep fix, and the missing checklist for the traceability matrix are recorded as Open Issues. Review of the whole document after the edits of this change.
 
 ## Action Items
 

@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Reviewed again after the amendment of the Business Case, Project Plan and milestone for the OpenGrep fix (autonomous, not independent) | pending |
 
 ---
 

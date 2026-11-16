@@ -9,7 +9,8 @@
 ## Version History
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial review record; verdict Go (autonomous, not independent) | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Reviewed again after the amendment of the Business Case, Project Plan and milestone for the OpenGrep fix (autonomous, not independent) | pending |
 
 ---
 
@@ -29,7 +30,7 @@
 | 1 | ROI/Cost-Benefit analysis is quantitative, or where qualitative, is explicitly justified | Pass | The Cost–Benefit Assessment says the costs and benefits are qualitative and why: a learning project with no revenue, so a money ROI would be invented. |
 | 2 | Risks are identified with documented impact and mitigation | Pass | The Risks table gives six risks, each with an impact and a mitigation; the new one is the review of the baseline by an AI stand-in. |
 | 3 | Success criteria are measurable, stating explicit targets rather than vague aspirations | Pass | The Success Criteria table gives eight criteria, each with a checkable target and a measure; the new one is SC8. |
-| 4 | Scope explicitly separates In Scope vs Out of Scope | Pass | The Scope section has separate In Scope and Out of Scope lists; the baseline milestone is in scope, and any change to `src/`, `tests/`, `docs/images/` or the wiki pages in that milestone is out of scope. |
+| 4 | Scope explicitly separates In Scope vs Out of Scope | Pass | The Scope section has separate In Scope and Out of Scope lists; the baseline milestone is in scope, and any change to `tests/`, `docs/images/` or the wiki pages in that milestone is out of scope, as is any change to `src/` other than the behaviour-neutral fix of the OpenGrep findings. |
 | 5 | Stakeholders are cross-referenced to Stakeholder Analysis IDs rather than re-described inline | Pass | The Stakeholders table cites S01, S02 and S03 of the Stakeholder Analysis and does not re-describe their roles. |
 | 6 | Methodology and quality-standard foundation are stated explicitly (e.g. ISO/IEC 25010, Larman) | Pass | The Methodological and Standards Foundation section names the SQA and QC framework, ISO/IEC 25010:2023, Clean Architecture and the Python conventions. |
 | 7 | Assumptions and constraints are explicit and clearly distinguished from one another | Pass | Assumptions and Constraints are two separate lists; the one-week constraint and the domain statement of the baseline milestone are in Constraints. |

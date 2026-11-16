@@ -11,7 +11,8 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added ADR-0001, ADR-0002 and RC-010, RC-011 | [982abab] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and the wiki with the review records RC-017 to RC-020, moved the domain of BC-001 and PP-001 to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added MIL-006 and the wiki with the review records RC-017 to RC-020, moved the domain of BC-001 and PP-001 to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -58,7 +59,7 @@ Tracks backward and forward links between artifact instances so that the Busines
 
 No view artifacts exist yet, so every concern is a Gap until the milestones deliver code, tests and the wiki. `-` in Last Reviewed means no `RC-*` exists yet.
 
-The domain of BC-001, PP-001 and MIL-006 is `education` since MIL-006; the other documents keep the domain `it` they were accepted with (see the Open Issues of PP-001). MIL-006 adds no view, so the status of the concerns does not change. It changes no source, test, screenshot or wiki file. The wiki has a row of its own here (it is reviewed in [RC-020]). The framework has no quality checklist for this matrix, so it has no review record of its own. The review records RC-001 to RC-020 are not rows themselves.
+The domain of BC-001, PP-001 and MIL-006 is `education` since MIL-006; the other documents keep the domain `it` they were accepted with (see the Open Issues of PP-001). MIL-006 adds no view, so the status of the concerns does not change. It changes no test, image or wiki file, and the source only by the behaviour-neutral fix of the OpenGrep findings (task 7). The wiki has a row of its own here (it is reviewed in [RC-020]). The framework has no quality checklist for this matrix, so it has no review record of its own. The review records RC-001 to RC-020 are not rows themselves.
 
 ---
 

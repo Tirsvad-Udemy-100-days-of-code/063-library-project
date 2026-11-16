@@ -13,7 +13,8 @@
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added CrossReference to SA-001 | [e02e021] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion SC8, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added objective O7, success criterion SC8, a scope item, an out-of-scope item, a risk and two constraints for the baseline milestone MIL-006; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -51,14 +52,14 @@ A single repository that mirrors the lecture steps lets the participant keep a r
 - Playground scripts for sqlite3 and SQLAlchemy as taught in the lessons.
 - pytest tests for every step, a README, a three-language wiki, screenshots per lecture step.
 - Repository description and topics.
-- The baseline milestone [MIL-006]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, the formatting and the unprivileged user of the screenshot tool, the update of the traceability matrix, review records and a review of the wiki. It changes no behaviour of the program.
+- The baseline milestone [MIL-006]: the framework release, the README without the private framework files in its appendix, project URL metadata, `.editorconfig`, `.env.example`, the formatting and the unprivileged user of the screenshot tool, the fix of the findings of the OpenGrep check (without a suppression), the update of the traceability matrix, review records and a review of the wiki. It changes no behaviour of the program.
 
 ### Out of Scope
 
 - Authentication, deployment, styling beyond the assignment templates, a REST API.
 - Any runtime dependency other than Flask and Flask-SQLAlchemy (with SQLAlchemy).
 - Use cases and user stories as formal artifacts (see PP-001 Open Issues).
-- Any change to `src/`, `tests/`, `docs/images/` or the wiki pages in the baseline milestone [MIL-006]. That milestone starts no site for the library, adds no book, retakes no screenshot of the repository and runs the tests only; the container image of the screenshot tool is built and tried once with a scratch output folder.
+- Any change to `tests/`, `docs/images/` or the wiki pages in the baseline milestone [MIL-006], and any change to `src/` other than the behaviour-neutral fix of the OpenGrep findings in `presentation/web.py` and `infrastructure/lessons/sqlite3_lesson.py`. That milestone starts no site for the library, adds no book, retakes no screenshot of the repository and runs the tests only; the container image of the screenshot tool is built and tried once with a scratch output folder.
 
 ## Expected Benefits
 
@@ -87,7 +88,7 @@ The project supports the participant's learning goal (the bootcamp) and the port
 | SC5 | Wiki languages | en, da, ms pages for every step | Wiki page list |
 | SC6 | Screenshots | One per lecture step in README and wiki | Files under `docs/images/` |
 | SC7 | Repository metadata | Description and at least five topics set | Git host repository page |
-| SC8 | The baseline milestone is done (objective O7) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass | The script exit codes and the pull request status on the git host |
+| SC8 | The baseline milestone is done (objective O7) | `framework/scripts/check-readme.sh`, `check-languages.sh` and `check-editorconfig.sh` exit with code 0, `python -m pytest` passes, 100 % of the continuous integration (CI) checks of the pull request of [MIL-006] pass, the OpenGrep check without a suppression | The script exit codes and the pull request status on the git host |
 
 ## Risks
 
@@ -98,7 +99,7 @@ The project supports the participant's learning goal (the bootcamp) and the port
 | Tokens in `.env` leak into the repository | Security defect | `.env` is in `.gitignore`; tokens are never printed, tested or imported |
 | Danish and Bahasa Malaysia text is machine-quality | Reader confusion | Keep sentences short; the Product Owner reviews the language pages |
 | Assignment function names conflict with clean layering | Hard to compare solutions | An Architecture Decision Record (ADR) keeps the assignment names at the web layer and layers the rest |
-| The documents of the baseline milestone [MIL-006] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `src/` and `tests/` are not changed, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
+| The documents of the baseline milestone [MIL-006] change documents that were accepted earlier, and an AI stand-in for S01 reviews them | A defect is missed because the review is not independent | Every review record of the baseline says `Mode: autonomous, not independent`, `tests/` is not changed, `src/` changes only for the behaviour-neutral fix of the OpenGrep findings, the tests run before and after, and the end-of-run summary lists the reviews for challenge |
 
 ## Assumptions
 

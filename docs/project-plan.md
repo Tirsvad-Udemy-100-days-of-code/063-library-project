@@ -12,7 +12,8 @@
 | Date | Status | Author | Reviewer | Change | Commit |
 | --- | --- | --- | --- | --- | --- |
 | 2026-11-09 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Initial version | [e02e021] |
-| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G6 (MIL-006) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #41, the tracked prompt log, the review record RC-016, the stale link of RC-009, the new traceability matrix rows and the CI in the Planning Assumptions and Open Issues; replaced the empty milestone column of G1 to G5 by the links to the milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Deprecated | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added the baseline gateway G6 (MIL-006) with its schedule row, scope coverage, dependency, risk and Gantt entries; recorded the move of the end date, the domain, the open pull request #41, the tracked prompt log, the review record RC-016, the stale link of RC-009, the new traceability matrix rows and the CI in the Planning Assumptions and Open Issues; replaced the empty milestone column of G1 to G5 by the links to the milestones on the git host; set the domain to education; reviewed in autonomous mode, not independent | [351a3e9] |
+| 2026-11-16 | Accepted | Jens Tirsvad Nielsen | AI as stand-in for S01 | Added task 7 and the scope for the fix of the OpenGrep findings that the shared check reported on the pull request (a behaviour-neutral change in three files); reviewed in autonomous mode, not independent | pending |
 
 ---
 
@@ -102,7 +103,7 @@ A No-Go on a gateway stops the chain; later windows move by the rework time. S01
 - The repository is public and holds a tracked prompt log `docs/ai-prompts/session-001/prompts.md` from the planning session, although `.gitignore` lists `/docs/ai-prompts/`. MIL-006 leaves it untouched and keeps its own prompt log in a new, ignored session folder; S01 decides whether the tracked file stays.
 - The review record RC-016 of the wiki has the verdict Go-with-conditions because its criterion 14 (published wiki) was Pending; MIL-006 reviews the wiki again against the current checklist, including the published wiki, in a new record and changes no page.
 - The review record RC-009 used the link [SA-001] without a link definition; MIL-006 adds the definition and changes nothing else in it.
-- The code carries `nosemgrep` markers from earlier milestones (in `presentation/web.py`). The baseline leaves them as they are and adds no suppression.
+- The code carried `nosemgrep` markers from earlier milestones with a rule id (`opengrep.rules...`) that the shared ruleset no longer uses (`opengrep.selected-rules...`), so they did not suppress. The OpenGrep check of the pull request of MIL-006 reported 9 blocking findings: the five route functions in `presentation/web.py`, the SELECT statement in `infrastructure/lessons/sqlite3_lesson.py` and the sleep and two subprocess calls of `scripts/screenshots/capture_screenshot.py`. MIL-006 fixes them with behaviour-neutral changes (task 7) and adds no suppression; the markers of the fixed lines are removed. The markers of the remaining warnings (a plain HTTP call to the local test server in the screenshot script, the raw statements in the create and insert functions of the sqlite3 lesson) are left as they are.
 - The framework has no quality checklist for the Traceability Matrix, so TM-001 is updated by MIL-006 but has no review record of its own; its Last Reviewed column names the records of the documents it lists.
 
 
